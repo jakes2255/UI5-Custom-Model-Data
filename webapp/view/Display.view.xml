@@ -1,9 +1,28 @@
 <mvc:View controllerName="com.demo.ZDemo_CustomPath.controller.Display" xmlns:mvc="sap.ui.core.mvc"
-	xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns="sap.m">
+	xmlns:html="http://www.w3.org/1999/xhtml" displayBlock="true" xmlns:l="sap.ui.layout" xmlns="sap.m">
 	<App id="idAppControl">
 		<pages>
-			<Page title="{i18n>title}">
-				<content></content>
+			<Page title="{i18n>appTitleCustom}">
+				<content>
+					<List class="sapUiResponsiveMargin" width="auto" items="{Results>/Data}" headerText="{i18n>listTitle}">
+						<items>
+							<ObjectListItem title="{Results>Employee}" number="{Results>BillingRate}" numberUnit="USD"
+								numberState="{=${Results>available} ? 'Success' : 'Error' }"/>
+						</items>
+					</List>
+					
+								<Button text="{i18n>btnTitle}" press=".onPressAdd"></Button>
+					<Panel id ="idPanelMore" headerText="{i18n>orgDetailsTitle}" visible="false">
+						<content>
+							<l:HorizontalLayout class="sapUiContentPadding">
+								<Label text="Organization" labelFor="input-b" design="Bold" class="sapUiSmallMarginTop"/>
+								<Input id="input-b" width="250px" class="sapUiSmallMarginBottom" value="{Results>/address/organization}" editable="false"/>
+								<Label text="Place" labelFor="input-c" class="sapUiSmallMarginTop"/>
+								<Input id="input-c" width="250px" class="sapUiSmallMarginBottom" value="{Results>/address/place}" editable="false"/>
+							</l:HorizontalLayout>	
+						</content>
+					</Panel>
+				</content>
 			</Page>
 		</pages>
 	</App>

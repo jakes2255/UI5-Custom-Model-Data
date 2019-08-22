@@ -1,0 +1,24 @@
+{
+	"Data":[
+		{
+			"Employee": "Rohan",
+			"BillingRate" : "11",
+			"available" : true
+		},
+		{
+			"Employee": "Lohn",
+			"BillingRate" : "17",
+			"available" : false
+		},
+		{
+			"Employee": "Mohn",
+			"BillingRate" : "55",
+			"available" : true
+		},
+		{
+			"Employee": "Elle",
+			"BillingRate" : "15",
+			"available" : false
+		}
+	]
+}

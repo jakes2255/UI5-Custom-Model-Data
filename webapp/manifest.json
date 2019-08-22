@@ -10,11 +10,19 @@
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"sourceTemplate": {
-			"id": "ui5template.basicSAPUI5ApplicationProject",
-			"version": "1.38.11"
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"RMTSAMPLEFLIGHT": {
+				"uri": "/sap/opu/odata/iwfnd/RMTSAMPLEFLIGHT/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -30,13 +38,8 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_hcb",
-			"sap_belize"
-
-		]
+		"supportedThemes": ["sap_hcb", "sap_belize"]
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "com.demo.ZDemo_CustomPath.view.Display",
@@ -60,6 +63,12 @@
 				"settings": {
 					"bundleName": "com.demo.ZDemo_CustomPath.i18n.i18n"
 				}
+			},
+			"Results": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/testData.json",
+				"preload": false
 			}
 		},
 		"resources": {
