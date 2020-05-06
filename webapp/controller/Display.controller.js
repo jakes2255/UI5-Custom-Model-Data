@@ -13,7 +13,7 @@ sap.ui.define([
 			var oJsonModel = this.getMyModel("Results");
 			//create an additional node to be added to the model
 			var additional_props = {
-				"organization": "SAP",
+				"organization": "Sap",
 				"place": "Waldrof"
 			};
 			//add the new node to the current model
