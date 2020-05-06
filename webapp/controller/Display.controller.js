@@ -14,7 +14,7 @@ sap.ui.define([
 			//create an additional node to be added to the model
 			var additional_props = {
 				"organization": "SAP",
-				"place": "Bangalore"
+				"place": "Waldrof"
 			};
 			//add the new node to the current model
 			oJsonModel.setProperty("/address",additional_props);
